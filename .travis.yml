@@ -14,7 +14,7 @@ after_success:
     - docker build -t justin/multi-server ./server
     - docker build -t justin/multi-worker ./worker
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-    - docker push justin/multi-client
+    - docker push timbalimbs/justin/multi-client
     - docker push justin/multi-nginx 
     - docker push justin/multi-server
     - docker push justin/multi-worker
